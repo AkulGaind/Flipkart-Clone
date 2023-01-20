@@ -29,6 +29,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    /* justify-content: center; */
+    /* grid-template-columns: repeat(6, 1fr); */
 }
 
 .search{
@@ -202,20 +204,6 @@ input {
   background-color: White; 
 }
 
-.offerimages {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 2% 5%;
-    margin: auto;
-    /* border: 1px solid red; */
-    /* grid-gap: 10px; */
-    height: fit-content;
-    width: fit-content;
-    /* height: 500px; */
-    /* overflow: auto;
-    resize: ;
-} */
-
 span {
     font-family: Roboto, Arial, sans-serif;
     font-size: 11px;
@@ -286,6 +274,11 @@ footer a{
 .address a{
     display: inline;
     color: #2874f0;
+}
+
+.container-fluid {
+    grid-template-columns: repeat(7, 1fr);
+    /* grid-template-rows: repeat(); */
 }
 
 
