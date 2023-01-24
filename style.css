@@ -104,6 +104,7 @@ form {
   padding: 0.5% 15%;
   background-color: white;
   border-bottom: 1px solid #EBEDF0;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 8%);
 }
 
 .categories {
@@ -140,7 +141,7 @@ body {
 .content {
   background-color: #F1F3F6;
   min-width: 978px;
-  max-width: 1680px;
+  max-width: 1720px;
   padding: 8px;
   margin: 0 auto;
 }
@@ -176,12 +177,24 @@ body {
 .banner {
   text-align: center;
   margin: 1.5vh;
+  /* background-image: url("https://rukminim1.flixcart.com/fk-p-flap/844/140/image/169c9ac44915178a.jpg?q=50"); */
+  position: relative;
 }
 
 .banner img {
   height: 100%;
   width: 97.5%;
 }
+
+.left-icon, .right-icon {
+  top: 0;
+  left: 0;
+  height: 40px;
+  margin: auto;
+  background-color: white;
+  position: absolute;
+}
+
 /* .productline {
   background-color: red;
   display: flex;
@@ -269,7 +282,7 @@ h2 {
 
 .item {
   height: 37vh;
-  width: 14.5vw;
+  width: 12vw;
 }
 
 .price button {
@@ -315,7 +328,7 @@ h2 {
 
 .company {
   font-size: 14px;
-  color: black;
+  color: #989898;
   text-align: center;
 }
 
