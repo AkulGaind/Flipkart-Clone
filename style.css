@@ -90,11 +90,11 @@ form {
   font-weight: bolder;
 }
 
-.dropdown-menu {
+.more-menu {
   display: none;
 }
 
-.more:hover .dropdown-menu{
+.more:hover .more-menu{
   background-color: White;
   display: block;
 }
@@ -125,7 +125,18 @@ form {
   font-weight: 500;
 }
 
+.lowerheader div:hover .text {
+  color: #2885F3;
+  cursor: pointer;
+}
 
+.electronics {
+  display: none;
+}
+
+#electric:hover .electronics {
+  display: block;
+}
 
 
 /* Middle Section */
@@ -267,15 +278,14 @@ h2 {
 
 .label {
   align-items: center;
-  margin: 4vh;
+  margin: 1vw;
   text-align: center;
   top: 0;
 }
 
-h2 {
-  font-size: 30px;
+.line-label {
+  line-height: 2.2vw;
   padding: 5.5vh 1vh 1vh;
-  line-height: 40px;
 }
 
 .all {
@@ -307,13 +317,14 @@ h2 {
 .price button {
   font-size: 12px;
     border: none;
+    text-align: center;
     background-color: #2874f0;
     color: white;
-    height: 37px;
-    width: 6vw;
+    height: 38px;
+    width: 5vw;
     border-radius: 2px;
     box-shadow: 2px 2px rgb(0,0,0,0.1);
-    margin-top: 1vh;
+    /* margin-top: 1vh; */
 }
 
 .thumb {
