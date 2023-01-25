@@ -10,11 +10,13 @@ html {
 }
 
 /* Header */
+
 .header {
   background-color: #2874F0;
   position: sticky;
   top: 0;
   z-index: 10;
+  font-size: 16px;
 }
 
 .header img {
@@ -83,12 +85,18 @@ form {
 
 .more button {
   background-color: #2874F0;
+  font-size: 16px;
   border: none;
   font-weight: bolder;
 }
 
-.more button:hover {
-  background-color: #2874F0;
+.dropdown-menu {
+  display: none;
+}
+
+.more:hover .dropdown-menu{
+  background-color: White;
+  display: block;
 }
 
 .cart a {
@@ -126,14 +134,6 @@ body {
   font-family: Roboto, Arial, sans-serif;
 }
 
-/* .midsection {
-  background-color: #F1F3F6;
-  min-width: 978px;
-  max-width: 1680px;
-  padding: 8px;
-  margin: 0 auto;
-} */
-
 .midsection {
   background-color: #F1F3F6;
 }
@@ -155,29 +155,9 @@ body {
   box-shadow: 0 2px 4px 0 rgb(0 0 0 / 8%);
 }
 
-/* .AngleL{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    height: 8.5vw;
-    width: 2.5vw;
-    z-index: 1;
-    position: relative;
-    left: 0;
-    bottom: 10.4vw;
-    padding-left: 0.5vw;
-}
-
-.leftAngle{
-    font-size: 2vw;
-} */
-
-
 .banner {
   text-align: center;
   margin: 1.5vh;
-  /* background-image: url("https://rukminim1.flixcart.com/fk-p-flap/844/140/image/169c9ac44915178a.jpg?q=50"); */
   position: relative;
 }
 
@@ -186,13 +166,47 @@ body {
   width: 97.5%;
 }
 
-.left-icon, .right-icon {
-  top: 0;
-  left: 0;
-  height: 40px;
-  margin: auto;
+.product-container {
+  position: relative;
+}
+
+.arrow-button {
+  height: 6vw;
+  width: 2.5vw;
   background-color: white;
+  padding: 0 12px;
+  margin: 6% 0;
   position: absolute;
+  z-index: 1;
+  /* box-shadow: 2px 2px rgb(0,0,0,0.1); */
+  border: none;
+}
+
+.banner .right-arrow {
+  margin: 4% 0;
+  right: 1.2%;
+}
+
+.banner .left-arrow {
+  margin: 4% 0;
+  left: 1.2%;
+}
+
+.right-arrow {
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  right: 2.1%;
+}
+
+.left-arrow {
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  left: 2.1%;
+}
+
+.arrow-button i {
+  font-size: 25px;
+  color: Black;
 }
 
 /* .productline {
@@ -244,6 +258,7 @@ h2 {
   overflow-x: auto;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
+  position: relative;
 
 }
 .course-carousel::-webkit-scrollbar {
@@ -278,6 +293,10 @@ h2 {
   overflow: hidden;
   /* height: 37vh; */
   /* padding-bottom: 56.25%; */
+}
+
+.scroll-item:hover .thumbnail {
+  transform: scale(1.02);
 }
 
 .item {
@@ -361,10 +380,6 @@ h2 {
     font-size: 14px;
 }
 
-.section {
-    /* margin: 3px; */
-}
-
 .smh {
     color: #848484;
     font-size: 14px;
@@ -398,7 +413,7 @@ p {
     color: rgb(135, 135, 135);
 }
 
-span {
+span .tags {
     font-family: Roboto, Arial, sans-serif;
     font-size: 11px;
     font-weight: 500;
