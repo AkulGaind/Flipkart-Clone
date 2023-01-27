@@ -9,6 +9,14 @@ html {
   font-size: 14px;
 }
 
+ul {
+  list-style-type: none;
+}
+
+ul a {
+  text-decoration: none;
+}
+
 /* Header */
 
 .header {
@@ -88,15 +96,26 @@ form {
   font-size: 16px;
   border: none;
   font-weight: bolder;
+  position: relative;
+}
+
+.more ul {
+  padding-left: 0;
 }
 
 .more-menu {
   display: none;
+  position: absolute;
 }
 
 .more:hover .more-menu{
   background-color: White;
   display: block;
+}
+
+.more-menu li {
+  padding: 5%;
+  min-width: 240px;
 }
 
 .cart a {
@@ -112,7 +131,7 @@ form {
   padding: 0.5% 15%;
   background-color: white;
   border-bottom: 1px solid #EBEDF0;
-  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 8%);
+  box-shadow: 0 1px 1px 0 rgb(0 0 0 / 16%);
 }
 
 .categories {
@@ -121,7 +140,7 @@ form {
 }
 
 .text {
-  text-align: center;
+  text-align: left;
   font-weight: 500;
 }
 
@@ -132,10 +151,66 @@ form {
 
 .electronics {
   display: none;
+  position: absolute;
+  top: 100%;
+  left: -180%;
+  z-index: 1;
+  background-color: White;
+  height: auto;
+  box-shadow: 0 4px 16px 0 rgb(0 0 0 / 20%);
+  font-size: 14px;
+  min-width: 240px;
+  padding: 15%;
+}
+
+.electronics ul {
+  padding: 0;
+}
+
+.cate2 {
+  display: none;
+  left: 105.5%;
+  top: -10%;
+  position: absolute;
+  background-color: white;
+  height: auto;
+  width: 100%;
+  min-width: 240px;
+  color: black;
+  font-size: 14px;
+  box-shadow: 0 1px 1px 0 rgb(0 0 0 / 16%);
+  font-weight: 400;
+}
+
+.cate2 li {
+  padding: 7%;
+}
+
+
+.electronic-item {
+  position: relative;
+  padding: 4%;
+  /* margin: 15%; */
 }
 
 #electric:hover .electronics {
+  display: inline-block;
+}
+
+.electronic-item:hover, .cate2 li:hover {
+  background-color: #F1F3F6;
+  color: #2885F3;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.electronic-item:hover .cate2 {
   display: block;
+  z-index: 0;
+}
+
+#electric {
+  position: relative;
 }
 
 
