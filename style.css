@@ -47,15 +47,22 @@ ul a {
   border: none;
   background-color: #fff;
   border-radius: 0px 2px 2px 0px;
+  padding: 0 10px;
 }
 
 .search form {
   margin: 0;
+  height: 36px;
+}
+
+::placeholder {
+  color: rgb(135, 135, 135);
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .search input {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px;
   border: none;
   border-radius: 2px 0px 0px 2px;
 }
@@ -108,14 +115,28 @@ form {
   position: absolute;
 }
 
-.more:hover .more-menu{
+.more:hover .more-menu {
   background-color: White;
   display: block;
 }
 
 .more-menu li {
-  padding: 5%;
+  padding: 4% 2% 5%;
   min-width: 240px;
+  border-bottom: 1px solid #F1F3F6;
+  font-size: 15px;
+}
+
+.more-menu li:hover {
+  background-color: #F1F3F6;
+}
+
+.btn:hover {
+  background-color: none;
+}
+
+.more-menu li i {
+  padding: 4%;
 }
 
 .cart a {
@@ -131,7 +152,7 @@ form {
   padding: 0.5% 15%;
   background-color: white;
   border-bottom: 1px solid #EBEDF0;
-  box-shadow: 0 1px 1px 0 rgb(0 0 0 / 16%);
+  box-shadow: 0 4px 16px 0 rgb(0 0 0 / 20%);
 }
 
 .categories {
@@ -140,7 +161,7 @@ form {
 }
 
 .text {
-  text-align: left;
+  text-align: center;
   font-weight: 500;
 }
 
@@ -150,11 +171,12 @@ form {
 }
 
 .electronics {
+  min-height: 572px;
   display: none;
   position: absolute;
   top: 100%;
   left: -180%;
-  z-index: 1;
+  z-index: 10;
   background-color: White;
   height: auto;
   box-shadow: 0 4px 16px 0 rgb(0 0 0 / 20%);
@@ -168,9 +190,11 @@ form {
 }
 
 .cate2 {
+  min-height: 572px;
   display: none;
+  padding: 4% 0;
   left: 105.5%;
-  top: -10%;
+  top: -30%;
   position: absolute;
   background-color: white;
   height: auto;
@@ -178,12 +202,12 @@ form {
   min-width: 240px;
   color: black;
   font-size: 14px;
-  box-shadow: 0 1px 1px 0 rgb(0 0 0 / 16%);
+  box-shadow: inset 6px 0px 9px -3px rgb(0 0 0 / 16%);
   font-weight: 400;
 }
 
 .cate2 li {
-  padding: 7%;
+  padding: 4% 8%;
 }
 
 
@@ -206,7 +230,16 @@ form {
 
 .electronic-item:hover .cate2 {
   display: block;
-  z-index: 0;
+  /* box-shadow: 0 4px 16px 0 rgb(0 0 0 / 20%); */
+}
+
+ul span {
+  color: rgba(135, 135, 135);
+  position: relative;
+  left: 7%;
+  color: rgb(135, 135, 135);
+  font-size: 12px;
+  font-weight: 500;
 }
 
 #electric {
@@ -359,8 +392,10 @@ h2 {
 }
 
 .line-label {
-  line-height: 2.2vw;
-  padding: 5.5vh 1vh 1vh;
+  font-weight: 400;
+  line-height: 1.4;
+  padding: 3.2vw 1vw 0;
+  margin-bottom: 10%;
 }
 
 .all {
@@ -576,4 +611,135 @@ footer a{
     margin: 0;
     text-align: left;
     font-size: 12px;
+}
+
+
+
+/* Media Queries */
+
+
+
+@media screen and (max-width: 1024px) {
+  .all {
+    margin: 0 0 1.5%;
+  }
+
+  .item {
+    height: 340px;
+    width: 230px;
+  }
+
+  .lowerheader {
+    padding: 1.5% 0;
+  }
+
+  .banner {
+    margin: 1% 0;
+  }
+
+  .banner img {
+    width: 100%;
+    height: 280px;
+  }
+
+  .banner .left-arrow {
+    left: 0;
+    margin: 9% 0;
+  }
+
+  .banner .right-arrow {
+    right: 0;
+    margin: 9% 0;
+  }
+
+  .right-arrow {
+    right: 0;
+  }
+
+  .left-arrow {
+    left: 0;
+  }
+
+  .line-label {
+    padding: 30% 5% 0;
+    margin-bottom: 0;
+  }
+
+  .price button {
+    width: 40%;
+  }
+
+  .arrow-button {
+    width: 4vw;
+    height: 10vw;
+    box-shadow: 0 4px 16px 0 rgb(0 0 0 / 20%);
+  }
+
+  .product-container button {
+    margin: 12% 0;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .content {
+    min-width: 0;
+  }
+
+  .text {
+    font-size: 10px;
+  }
+
+  .categories {
+    height: 48px;
+    width: 48px;
+  }
+
+  .upperfooter {
+    margin: 0 30px 30px;
+    font-size: 10px;
+  }
+
+  .address {
+    font-size: 10px;
+  }
+
+  .smtags {
+    font-size: 8px;
+  }
+
+  p {
+    font-size: 8px
+  }
+
+  .heading {
+    font-size: 12px;
+  }
+
+  .cart {
+    display: none;
+  }
+
+  .seller a{
+    font-size: 12px;
+    margin: 5px;
+  }
+
+  .user button {
+    width: 95px;
+    margin: 0 15px;
+  }
+
+  .more button {
+    font-size: 12px;
+  }
+
+  .more:hover .more-menu {
+    display: none;
+  }
+
+  .header img {
+    margin: 2px 0 0;
+  }
+
 }
